@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search | Unnamed Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Erica+One&display=swap" rel="stylesheet">
+    <style>
+        :root {
+        --brand-cream: #f4f1de;
+        --brand-salmon: #e07a5f;
+        --brand-navy: #3d405b;
+        --brand-green: #81b29a;
+        --brand-yellow: #f2cc8f;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col overflow-x-hidden" style="background-color: var(--brand-navy);">
+
+    <nav class="w-full px-6 md:px-12 py-4 flex items-center justify-between sticky top-0 z-30 shadow-lg rounded-b-2xl" style="background-color: var(--brand-cream);">
+
+      <div class="flex items-center">
+        <a href="../../index.html" class="text-2xl md:text-3xl font-titan-one font-bold" style="color: var(--brand-navy); text-decoration: none; font-family: 'Titan One', cursive;">
+          Unnamed Marketplace
+        </a>
+      </div>
+
+      <div class="flex-1 max-w-md mx-8 hidden md:block">
+        <div class="relative">
+          <input 
+            type="text" 
+            id="searchInput"
+            placeholder="Search vehicles..." 
+            class="w-full px-4 py-2 pl-10 rounded-full border-2 font-montserrat text-sm focus:outline-none focus:border-opacity-60 transition-colors duration-200" 
+            style="border-color: var(--brand-navy); background-color: var(--brand-cream); font-family: 'Montserrat', sans-serif;"
+          />
+          <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-sm" style="color: var(--brand-navy);"></i>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="#" class="px-4 py-2 rounded-md font-bold text-sm tracking-wide font-montserrat transition-colors duration-200 hidden sm:block" style="color: var(--brand-navy); background-color: transparent; border: 2px solid var(--brand-navy); font-family: 'Montserrat', sans-serif;" onmouseover="this.style.backgroundColor='var(--brand-yellow)'" onmouseout="this.style.backgroundColor='transparent'">
+          Your Account
+        </a>
+        <a href="#" class="px-4 py-2 rounded-md font-bold text-white text-sm tracking-wide font-montserrat transition-colors duration-200" style="background-color: var(--brand-salmon); font-family: 'Montserrat', sans-serif;" onmouseover="this.style.backgroundColor='var(--brand-navy)'" onmouseout="this.style.backgroundColor='var(--brand-salmon)'">
+          Browse Listings
+        </a>
+      </div>
+    </nav>
+
+    <section id="search-results" class="flex-1 w-full min-h-[calc(100vh-80px)]">
+      <div class="flex items-center justify-between ml-8 mr-8 mb-6 mt-10">
+        <h2 id="search-results-header" class="text-2xl md:text-3xl font-bold tracking-wide" style="color: #e4e4e7; font-family: 'Open Sans', cursive; letter-spacing: 1px;"></h2>
+        <div class="flex gap-3">
+          <button class="filter-btn flex items-center gap-2 px-4 py-2 rounded-full bg-[#556080] text-white font-semibold text-sm transition-all duration-200" style="transition: background 0.2s, color 0.2s;">
+            <i class="fas fa-filter"></i> Filter
+          </button>
+          <button class="filter-btn flex items-center gap-2 px-4 py-2 rounded-full bg-[#556080] text-white font-semibold text-sm transition-all duration-200" style="transition: background 0.2s, color 0.2s;">
+            <i class="fas fa-sort-amount-down"></i> Sort
+          </button>
+          <button class="filter-btn flex items-center gap-2 px-4 py-2 rounded-full bg-[#556080] text-white font-semibold text-sm transition-all duration-200" style="transition: background 0.2s, color 0.2s;">
+            <i class="fas fa-sliders-h"></i> Advanced
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12 w-full max-w-7xl mx-auto px-4 py-8">
+        <div class="flex flex-col items-center">
+          <div class="rounded-2xl shadow-lg h-32 sm:h-40 w-full flex items-center justify-center" style="background-color: #556080;"></div>
+          <div class="mt-3 h-4 w-2/3 rounded-full" style="background-color: #556080;"></div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="rounded-2xl shadow-lg h-32 sm:h-40 w-full flex items-center justify-center" style="background-color: #556080;"></div>
+          <div class="mt-3 h-4 w-2/3 rounded-full" style="background-color: #556080;"></div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="rounded-2xl shadow-lg h-32 sm:h-40 w-full flex items-center justify-center" style="background-color: #556080;"></div>
+          <div class="mt-3 h-4 w-2/3 rounded-full" style="background-color: #556080;"></div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="rounded-2xl shadow-lg h-32 sm:h-40 w-full flex items-center justify-center" style="background-color: #556080;"></div>
+          <div class="mt-3 h-4 w-2/3 rounded-full" style="background-color: #556080;"></div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="rounded-2xl shadow-lg h-32 sm:h-40 w-full flex items-center justify-center" style="background-color: #556080;"></div>
+          <div class="mt-3 h-4 w-2/3 rounded-full" style="background-color: #556080;"></div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="rounded-2xl shadow-lg h-32 sm:h-40 w-full flex items-center justify-center" style="background-color: #556080;"></div>
+          <div class="mt-3 h-4 w-2/3 rounded-full" style="background-color: #556080;"></div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="rounded-2xl shadow-lg h-32 sm:h-40 w-full flex items-center justify-center" style="background-color: #556080;"></div>
+          <div class="mt-3 h-4 w-2/3 rounded-full" style="background-color: #556080;"></div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="rounded-2xl shadow-lg h-32 sm:h-40 w-full flex items-center justify-center" style="background-color: #556080;"></div>
+          <div class="mt-3 h-4 w-2/3 rounded-full" style="background-color: #556080;"></div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="rounded-2xl shadow-lg h-32 sm:h-40 w-full flex items-center justify-center" style="background-color: #556080;"></div>
+          <div class="mt-3 h-4 w-2/3 rounded-full" style="background-color: #556080;"></div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="rounded-2xl shadow-lg h-32 sm:h-40 w-full flex items-center justify-center" style="background-color: #556080;"></div>
+          <div class="mt-3 h-4 w-2/3 rounded-full" style="background-color: #556080;"></div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="rounded-2xl shadow-lg h-32 sm:h-40 w-full flex items-center justify-center" style="background-color: #556080;"></div>
+          <div class="mt-3 h-4 w-2/3 rounded-full" style="background-color: #556080;"></div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="rounded-2xl shadow-lg h-32 sm:h-40 w-full flex items-center justify-center" style="background-color: #556080;"></div>
+          <div class="mt-3 h-4 w-2/3 rounded-full" style="background-color: #556080;"></div>
+        </div>
+    </section>
+    <div class="w-full flex justify-center mt-2 mb-8 px-4">
+      <a href="#" class="px-6 sm:px-8 py-3 sm:py-4 font-bold text-white text-base sm:text-lg tracking-wide font-montserrat transition-all duration-200 hover:scale-105 flex items-center gap-2" style="background-color: var(--brand-salmon); border-radius: 64px;">
+        <i class="fas fa-arrow-right"></i>
+        View More
+      </a>
+    </div>
+
+    <section class="w-full h-auto min-h-[50vh] flex items-center justify-center rounded-t-3xl py-12 md:py-0 md:h-[50vh]" style="background-color: var(--brand-salmon);">
+      <div class="flex flex-col items-center justify-center px-4 md:px-8 max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6" style="color: var(--brand-cream); font-family: 'Erica One', cursive;">
+          Found Your Perfect Match?
+        </h2>
+        <p class="text-base sm:text-lg md:text-xl font-montserrat mb-6 sm:mb-8 px-2" style="color: var(--brand-cream); font-weight: 600; font-family: 'Montserrat', sans-serif;">
+          Get expert advice, schedule a test drive, or connect with our team to make your car buying experience seamless and stress-free.
+        </p>
+        <div class="flex flex-col md:flex-row gap-3 sm:gap-4">
+          <a href="#" class="px-6 sm:px-8 py-3 sm:py-4 font-bold text-white text-base sm:text-lg tracking-wide font-montserrat transition-all duration-200 hover:scale-105" style="background-color: var(--brand-navy); box-shadow: 0 4px 12px rgba(0,0,0,0.2); border-radius: 8px; font-family: 'Montserrat', sans-serif;">
+            Schedule Test Drive
+          </a>
+          <a href="#" class="px-6 sm:px-8 py-3 sm:py-4 font-bold text-base sm:text-lg tracking-wide font-montserrat transition-all duration-200 hover:scale-105 border-2" style="color: var(--brand-navy); background-color: var(--brand-cream); border-color: var(--brand-navy); border-radius: 8px; font-family: 'Montserrat', sans-serif;">
+            Get Financing
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var searchInput = document.getElementById('searchInput');
+      var storedQuery = localStorage.getItem('searchQuery');
+      if (searchInput && storedQuery) {
+        searchInput.placeholder = storedQuery;
+        localStorage.removeItem('searchQuery');
+      }
+      var header = document.getElementById('search-results-header');
+      if (header) {
+        if (storedQuery) {
+          header.innerHTML = `Search Results For \"<span style=\"font-family: 'Open Sans', sans-serif;\">${storedQuery}</span>\"`;
+        } else {
+          header.textContent = "Browse All Vehicles";
+        }
+      }
+      document.querySelectorAll('.filter-btn').forEach(function(btn) {
+        btn.addEventListener('mouseenter', function() {
+          btn.style.backgroundColor = 'var(--brand-salmon)';
+          btn.style.color = 'var(--brand-cream)';
+        });
+        btn.addEventListener('mouseleave', function() {
+          btn.style.backgroundColor = '#556080';
+          btn.style.color = 'white';
+        });
+      });
+      if (searchInput) {
+        searchInput.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' && searchInput.value.trim() !== '') {
+            localStorage.setItem('searchQuery', searchInput.value.trim());
+            window.location.href = './index.html';
+          }
+        });
+      }
+    });
+  </script>
+  </body>
+</html>
